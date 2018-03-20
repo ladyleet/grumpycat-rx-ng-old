@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: black;
+  font-family: Roboto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: white;
+}
+
+.cat-styling {
+  position: relative;
+  top: 80px;
+}
+
+.bowl-styling {
+  position: absolute;
+}
+
+.scoreboard-styling {
+  position: absolute;
+  top: 150px;
+  left: 600px;
+
+}
