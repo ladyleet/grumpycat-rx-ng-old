@@ -12,18 +12,88 @@ body {
   color: white;
 }
 
-.cat-styling {
-  position: relative;
-  top: 80px;
-}
-
-.bowl-styling {
-  position: absolute;
-}
-
 .scoreboard-styling {
   position: absolute;
   top: 150px;
   left: 600px;
 
+}
+
+.😸 {
+  position: relative;
+  top: 80px;
+}
+
+.🥣 {
+  position: absolute;
+}
+
+.🍩 {
+  position: absolute;
+  left: 40px;
+  top: 60px;
+}
+
+.🍟 {
+  position: absolute;
+  left: 250px;
+  top: 90px;
+}
+
+.🐟 {
+  position: absolute;
+  left: 820px;
+  top: 580px;
+}
+
+.🍔 {
+  position: absolute;
+  left: 1000px;
+  top: 680px;
+}
+
+.🌭 {
+  position: absolute;
+  left: 430px;
+  top: 160px;
+}
+
+.🍕 {
+  position: absolute;
+  left: 780px;
+  top: 740px;
+}
+
+.🌮 {
+  position: absolute;
+  left: 1200px;
+  top: 600px;
+}
+
+.🍽 {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.🍽:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.counter-cat {
+  position: absolute;
+  left: 1140px;
+  top: 393px;
+  font-family: Impact;
+  font-size: 80px;
+  color: red;
+}
+
+.counter-you {
+  position: absolute;
+  left: 705px;
+  top: 393px;
+  font-family: Impact;
+  font-size: 80px;
+  color: red;
 }
