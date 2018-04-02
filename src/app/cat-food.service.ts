@@ -6,7 +6,7 @@ export class CatFoodService {
 
   constructor(public http: HttpClient) { }
 
-  getCatFood() {
-    return this.http.get('http://localhost:5000/api/catfood?{}')
+  getCatFood(food) {
+    return this.http.get<string[]>(`http://localhost:5000/api/catfood?food=${food}`)
   }
 }

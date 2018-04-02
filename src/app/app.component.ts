@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { fromEvent } from 'rxjs/observable/fromEvent';
+import { CatFoodService } from './cat-food.service';
 import { Subscription } from 'rxjs/Subscription';
 import { Subject } from 'rxjs/Subject';
-import { filter, mergeMap, tap, takeUntil, map, scan } from 'rxjs/operators';
+import { filter, mergeMap, switchMap, tap, takeUntil, map, scan } from 'rxjs/operators';
 
 function hasBeenFedToGrumpyCat(x: number, y: number) {
   return x > 0 && x < 700 && y > 400 && y < 700
@@ -17,6 +18,14 @@ function hasBeenFedToGrumpyCat(x: number, y: number) {
 export class AppComponent {
   title = 'app';
   subscription: Subscription;
+  food$ = new Subject<string>();
+  result$ = this.food$.pipe(
+    switchMap(food =>
+      this.catfood.getCatFood(food)
+    ),
+    map(foods => foods.join(', '))
+  );
+
   mouseDown$ = fromEvent(document, 'mousedown');
   mouseMove$ = fromEvent(document, 'mousemove');
   mouseUp$ = fromEvent(document, 'mouseup');
@@ -55,6 +64,9 @@ export class AppComponent {
       )
     )
   );
+  
+  constructor(public catfood: CatFoodService) {
+  }
 
   ngOnInit() {
     this.subscription = this.mouseDrag$.subscribe(({ top, left, draggable }) => {
