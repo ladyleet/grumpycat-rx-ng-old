@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { fromEvent } from 'rxjs/Observable/fromEvent';
+import { fromEvent } from 'rxjs/observable/fromEvent';
 import { Subscription } from 'rxjs/Subscription';
 import { Subject } from 'rxjs/Subject';
 import { filter, mergeMap, tap, takeUntil, map, scan } from 'rxjs/operators';
